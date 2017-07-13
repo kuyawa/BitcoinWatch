@@ -4,4 +4,4 @@ Bitcoin Watch is a simple watchOS application that displays the BTC price of the
 
 ![Screenshot](https://raw.githubusercontent.com/kuyawa/Gallery/master/BitcoinWatch/mainshot.jpg)
 
-This is my first watchOS app. I can do server, desktop, mobile and now watch apps, will soon try tvOS apps too. Stay tuned.
+This is my first watchOS app. I can do server, desktop, mobile and now watch apps in Swift, will soon try tvOS apps too. Stay tuned.
