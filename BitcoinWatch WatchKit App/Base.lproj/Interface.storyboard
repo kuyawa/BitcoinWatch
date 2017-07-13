@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--bg-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller backgroundImage="bg" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitcoinWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="60" height="60" alignment="center" alpha="0.80000000000000004" image="bitcoin" id="wZo-J9-BCp"/>
+                        <group width="1" height="38" alignment="left" id="nfc-gl-4kS">
+                            <items>
+                                <imageView width="20" height="16" alignment="left" verticalAlignment="center" id="lX6-Wg-KYE"/>
+                                <label height="25" alignment="center" verticalAlignment="center" text="LOADING" textAlignment="center" id="ACg-OB-gaB">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <imageView width="20" height="16" alignment="right" verticalAlignment="center" id="CJ1-Be-2GD"/>
+                            </items>
+                        </group>
+                        <label width="1" alignment="center" text="VOL: 0 M" textAlignment="center" id="yyH-qj-NuV">
+                            <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="1" alignment="center" text="MKT: 0 M" textAlignment="center" id="c9f-Tg-89c">
+                            <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="imageLeft" destination="lX6-Wg-KYE" id="sVT-FH-AVb"/>
+                        <outlet property="imageRight" destination="CJ1-Be-2GD" id="aoI-2v-aha"/>
+                        <outlet property="textMarket" destination="c9f-Tg-89c" id="avJ-LL-Keg"/>
+                        <outlet property="textPrice" destination="ACg-OB-gaB" id="BQh-W2-f0N"/>
+                        <outlet property="textVolume" destination="yyH-qj-NuV" id="ZSh-42-9j1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="257"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="BitcoinWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
